@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/458559509821746726/083c032ee1cc4566b43f6b13248c9b40/artifacts
+end_time: 1758553898504
+entry_point_name: ''
+experiment_id: '458559509821746726'
+lifecycle_stage: active
+run_id: 083c032ee1cc4566b43f6b13248c9b40
+run_name: wise-grouse-417
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758553896235
+status: 3
+tags: []
+user_id: alex

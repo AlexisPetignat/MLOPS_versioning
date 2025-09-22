@@ -1,0 +1,10 @@
+artifact_location: mlflow-artifacts:/458559509821746726/models/m-11a43184546f4dde8ac6228babad1fee/artifacts
+creation_timestamp: 1758554320323
+experiment_id: '458559509821746726'
+last_updated_timestamp: 1758554322422
+model_id: m-11a43184546f4dde8ac6228babad1fee
+model_type: ''
+name: Les espaces verts dans paris
+source_run_id: 04b6a30cfa334012b59d8dab3d52af32
+status: 2
+status_message: null

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/458559509821746726/bfeae00a25b444afbcd9356c9737a71f/artifacts
+end_time: 1758554764937
+entry_point_name: ''
+experiment_id: '458559509821746726'
+lifecycle_stage: active
+run_id: bfeae00a25b444afbcd9356c9737a71f
+run_name: powerful-eel-217
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758554762615
+status: 3
+tags: []
+user_id: alex

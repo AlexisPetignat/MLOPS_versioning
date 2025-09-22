@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/458559509821746726/04b6a30cfa334012b59d8dab3d52af32/artifacts
+end_time: 1758554322519
+entry_point_name: ''
+experiment_id: '458559509821746726'
+lifecycle_stage: active
+run_id: 04b6a30cfa334012b59d8dab3d52af32
+run_name: legendary-cub-26
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758554320246
+status: 3
+tags: []
+user_id: alex

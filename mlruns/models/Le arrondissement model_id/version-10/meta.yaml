@@ -1,0 +1,18 @@
+aliases: []
+creation_timestamp: 1758554642266
+current_stage: None
+deployment_job_state: null
+description: ''
+last_updated_timestamp: 1758554642266
+metrics: null
+model_id: m-999c107b9d404d21822ae9bee936ee4f
+name: Le arrondissement model_id
+params: null
+run_id: 2935262f645e4a768a91bc40c7e1f68d
+run_link: ''
+source: models:/m-999c107b9d404d21822ae9bee936ee4f
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/458559509821746726/models/m-999c107b9d404d21822ae9bee936ee4f/artifacts
+user_id: null
+version: 10
