@@ -3,6 +3,7 @@ from pydantic import BaseModel
 import pandas as pd
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import train_test_split
+import numpy as np
 
 
 # Model default parameters
@@ -41,23 +42,11 @@ def train(params=params):
     return model
 
 
-model = train(params)
+# Params
+current = train(params)
+next = train(params)
+p = 0.5
 app = FastAPI()
-
-
-class ModelParams(BaseModel):
-    n_estimators: int
-    learning_rate: float
-    max_depth: int
-    random_state: int
-
-
-@app.post("/update-model")
-async def updateModel(parameters: ModelParams):
-    params = parameters.model_dump()
-    global model
-    model = train(params)
-    return params
 
 
 class fish(BaseModel):
@@ -70,5 +59,37 @@ class fish(BaseModel):
 
 @app.post("/predict")
 async def predict(le_fish: fish):
-    global model
-    return model.predict(pd.DataFrame([le_fish.model_dump()])).tolist()
+    global current, next
+
+    if np.random.rand() < p:
+        return current.predict(pd.DataFrame([le_fish.model_dump()])).tolist()
+    return next.predict(pd.DataFrame([le_fish.model_dump()])).tolist()
+
+
+class ModelParams(BaseModel):
+    n_estimators: int
+    learning_rate: float
+    max_depth: int
+    random_state: int
+
+
+@app.post("/update-model")
+async def updateModel(parameters: ModelParams):
+    params = parameters.model_dump()
+    global next
+    next = train(params)
+    return params
+
+
+@app.post("/accept-next-model")
+async def acceptNextModel():
+    global current, next
+    current = next
+    return {"status": "accepted"}
+
+
+@app.post("/update-p")
+async def updateP(new_p: float):
+    global p
+    p = new_p
+    return {"p": p}
